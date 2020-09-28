@@ -1,25 +1,144 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 	<html>
 	<head>
-		<title> Georgii Ivannikov | Software developer</title>
+		<title class="lang" key="titleName"> Georgii Ivannikov | Software developer</title>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<meta name="keywords" content="" />
 		<meta name="description" content="" />
 		<!-- Declares CSS pixels -->
 			<meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="stylesheet" type="text/css" href="layouts/resume.css" media="all" />
 			<link rel="shortcut icon" href="img/favicon.ico" />
+			<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Comfortaa&subset=latin,cyrillic">
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+		<script type="text/javascript">
+		var arrLang = {
+			'en': {
+			  'titleName': 'Georgii Ivannikov | Software developer',
+			  'name': 'Georgii Ivannikov',
+			  'general': 'Profile',
+			  'technologyGeneral': 'Detail/ Example',
+			  'generalDescription': `Initially graduated from Moscow State Medical University,' 
+									I started my way into programming three yars ago and commited myself to it.
+									Now i am 3rd semester
+									Computer science department Master student, studying at the University of Saarland,
+									Germany and a part time employee of Chair of Automation and Energy systems at UdS,
+									implementing functionality for weather related application.
+									I like lisps and always up to program in functional style.`,
+			  'firstTech': 'Api with game recordings, web scraper for animal shelters + api',
+			  'secondTech': 'Maintain and develop test-driven api for different enpoints for a weather service',
+			  'thirdTech': 'Create and maintain docker container for a training neural network on remote server',
+			  'fourthTech': 'Small library emulating different encoding techniques used in image compression',
+			  'fifthTech': 'Digit recognizer, image cutter for multiple digits',
+			  'university': 'At the University',
+			  'sixthTech': 'Image processing, Computer vision, Image analysis',
+			  'education': 'Education',
+			  'universityName': 'University of Saarland',
+			  'masterOne': '2019, Master of Science - ongoing',
+			  'universityNameTwo': 'First Moscow State Medical University',
+			  'pharmacy': 'Pharmacy',
+			  'masterTwo': 'Master of Science 2013 - 2018',
+			  'honors': 'Dimploma with Honors',
+			  'experience': 'Experience',
+			  'udsaes': 'Chair of Automation and Energy Systems, Saarland University',
+			  'workOne': '02/2020 - ongoing',
+			  'workOneActivity': 'Implementing backend API for a weather service',
+			  'kiLocation': 'ki-elements, Saarland',
+			  'workTwoActivity': 'UI and unittest automatisation, software development',
+			  'berendsenLocation': 'Berendsen(Elis) Russia, Moscow',
+			  'berendsen': 'Quality manager',
+			  'books': 'Technical literature that encouraged me',
+			  'sicp': 'Structure and interpretation of Computer programs',
+			  'sicpAuthors': 'MIT Course, Harolf Abelson',
+			  'django': 'The definitive Guide to Django, Second edition',
+			  'djangoAuthors': 'Adrian Holovaty, Jacob Kaplan-Moss',
+			  'grockingAlgorithms': 'Grokking algorithms',
+			  'grockingAlgorithmsAuthors': 'Aditya Bhargava',
+			  'js': 'JavaScript for impatient programmers',
+			  'jsAuthors': 'Dr. Axel Rauschmayer',
+			  'aboutMe': 'More about me',
+			  'aboutMeContentsOne': `I am willing to find a place, where i can work and learn,
+									can make use of my skills,
+									bring value by my work, become more professional, where 
+									working process is both productive and pleasant.`,
+			  'aboutMeContentsTwo': 'I am 24. In leisure time i play guitar, record videos, play football and draw.',
+			  'aboutMeContentsThree': 'I speak Russian-native, English-C1, German-B2.',
+			  'aboutMeContentsFour': 'Althoug i am a student, my current condition definetely allows me to work at least 20 hours a week',
+			  'aboutMeContentsFive': 'Remote positions are preferred',
+			},
+			'ru': {
+			  'titleName': 'Георгий Иванников | Разработка',
+			  'name': 'Георгий Иванников',
+			  'general': 'Общее',
+			  'technologyGeneral': 'Описание/ Пример',
+			  'generalDescription': `Я выпускник Первого Медицинского Государственного Университета Москвы. 
+                        Загорелся желанием программировать 2 года назад и, насколько мог, посвятил себя этому.
+                        Сегодня я студент магистр Computer Science в Университете Саарланда, Германия, работаю парт-тайм
+                        бекенд разработчиком в сфере автоматизации и энергетических систем там же.
+						Любитель функциональных языков программирования, Lisp и Clojure.`,
+			  'firstTech': 'Апи для записи информации об играх, веб скрейпер и апи для приютов для животных',
+			  'secondTech': 'Разработка и поддержка тест-дривен апи для погодного сервиса',
+			  'thirdTech': 'Создание и поддержка Docker образа окружения для тренировки нейросети на удаленном сервере в jupyter notebook',
+			  'fourthTech': 'Мини библиотека с алгоритмами кодировки',
+			  'fifthTech': 'Распознователь чисел, алгоритм поиска чисел на изображении и их обрезка',
+			  'university': 'В Университете',
+			  'sixthTech': 'Различные темы о математическом анализе изображений и компьютерном зрении',
+			  'education': 'Образование',
+			  'universityName': 'Университет Саарланда',
+			  'masterOne': '2019, Мастер - до сих пор',
+			  'universityNameTwo': 'Первый Московский Государственный Медицинский Университет',
+			  'pharmacy': 'Фармация',
+			  'masterTwo': 'Специалист 2013 - 2018',
+			  'honors': 'Диплом с отличием',
+			  'experience': 'Опыт',
+			  'udsaes': 'Отдел автоматизации и энергетических систем, Университет Саарланда',
+			  'workOne': '02/2020 - до сих пор',
+			  'workOneActivity': 'Разработка и поддержка апи приложения о погоде',
+			  'kiLocation': 'ki-elements, Саарланд',
+			  'workTwoActivity': 'Автоматизация unit и UI тестов, участие в разработке бекэнда и ML',
+			  'berendsenLocation': 'Berendsen(Elis) Россия, Москва',
+			  'berendsen': 'Менеджер по качеству',
+			  'books': 'Ключевая пройденная техническая литература',
+			  'sicp': 'Структура и интерпретация компьютерных программ',
+			  'sicpAuthors': 'Курс MIT, Гарольд Абельсон',
+			  'django': 'Подробное руководство Django, второе издание',
+			  'djangoAuthors': 'А. Головатыйб Я. Каплан-Мосс',
+			  'grockingAlgorithms': 'Грокаем алгоритмы',
+			  'grockingAlgorithmsAuthors': 'Адитья Бхаргава',
+			  'js': 'JS для нетерпеливый программистов',
+			  'jsAuthors': 'Аксель Рейшмайер',
+			  'aboutMe': 'Еще немного обо мне',
+			  'aboutMeContentsOne': `Я хочу найти место где буду полезен, мои навыки пригодятся и где я смогу повысить свой профессионализм`,
+			  'aboutMeContentsTwo': 'Мне 24. В свободное время играю на струнных инструментах, рисую, играю в футбол',
+			  'aboutMeContentsThree': 'Языковые навыки: Английский-C1, Немецкий-B2.',
+			  'aboutMeContentsFour': 'Althoug i am a student, my current condition definetely allows me to work at least 20 hours a week',
+			  'aboutMeContentsFive': 'Рассматриваю удаленные варианты',
+			}
+		  };
+		      // Process translation
+		$(function() {
+			$('.translate').click(function() {
+				var lang = $(this).attr('id');
+
+				$('.lang').each(function(index, item) {
+				$(this).text(arrLang[lang][$(this).attr('key')]);
+				});
+			});
+		});
+		</script>
 	</head>
 	<body>
 
 	<!--=============================================================================================-->
 	<!--               Hi person looking at my code, this is a simple responsive resumé              -->
 	<!--=============================================================================================-->
-
+	
 	<div class="body"> <!--body-->
 		<div class="grid grid-pad">
 			<div class="col-2-3">
 				<div class="content">
-					<h1>Georgii Ivannikov</h1>
+					<h1 class="lang" key="name">Georgii Ivannikov</h1>
+					<button id="en" class="translate">English</button>
+					<button id="ru" class="translate">Русский</button>
 					<div class="hr visible-mobile "></div>
 				</div>
 			</div>
@@ -43,12 +162,13 @@
 		<div class="grid">
 			<div class="col-1-6">
 				<div class="content">
-					<h1>Profile</h1>			
+					<h1 class="lang" key="general">Profile</h1>			
 				</div>
 			</div>
 			<div class="col-5-6">
 				<div class="content no-header">
-					<p>Initially graduated from Moscow State Medical University, 
+					<p class="lang" key="generalDescription">
+						Initially graduated from Moscow State Medical University, 
 						I started my way into programming three yars ago and commited myself to it.
 						Now i am 3rd semester
 						Computer science department Master student, studying at the University of Saarland,
@@ -62,45 +182,51 @@
 		<div class="grid ">
 			<div class="col-1-6">
 				<div class="content">
-					<h1>Detail/ Example</h1>
+					<h1 class="lang" key="technologyGeneral">Detail/ Example</h1>
 				</div>
 			</div>
 			<div class="col-5-6">
 				<div class="content">
-					<div class="col-1-3">
-						<ul class="talent">
-							<li>Python, Flask, Django</li>
-							<li class="last">Api with game recordings, web scraper for animal shelters + api </li>
-						</ul>
+				<div class="col-1-3">
+					<ul class="talent">
+						<li>Python, Flask, Django</li>
+						<li class="last lang" key="firstTech">
+							Api with game recordings, web scraper for animal shelters + api </li>
+					</ul>
 				</div>
 				<div class="col-1-3">
 					<ul class="talent">
-						<li>Node.js, Express.js, React</li>
-						<li class="last">Maintain and develop test-driven api for different enpoints for a weather service</li>
+						<li>Node.js, Express.js, React, Minio</li>
+						<li class="last lang" key="secondTech">
+							Maintain and develop test-driven api for different enpoints for a weather service</li>
 					</ul>
 				</div>
 				<div class="col-1-3">
 					<ul class="talent">
 						<li>Git, linux/bash, Docker</li>
-						<li class="last">Create and maintain docker container for a training neural network on remote server</li>
+						<li class="last lang" key="thirdTech">
+							Create and maintain docker container for a training neural network on remote server</li>
 					</ul>
 				</div>
 				<div class="col-1-3">
 					<ul class="talent">
 						<li>Clojure, Lisps</li>
-						<li class="last">Small library emulating different encoding techniques used in image compression</li>
+						<li class="last lang" key="fourthTech">
+							Small library emulating different encoding techniques used in image compression</li>
 					</ul>
 				</div>
 				<div class="col-1-3">
 					<ul class="talent">
 						<li>Python scientific packages</li>
-						<li class="last">Digit recognizer, image cutter for multiple digits</li>
+						<li class="last lang" key="fifthTech">
+							Digit recognizer, image cutter for multiple digits</li>
 					</ul>
 				</div>	
 				<div class="col-1-3">
 					<ul class="talent">
-						<li>At the University</li>
-						<li class="last">Image processing, Computer vision, Image analysis</li>
+						<li class="lang" key="university">At the University</li>
+						<li class="last lang" key="sixthTech">
+							Image processing, Computer vision, Image analysis</li>
 					</ul>
 				</div>	
 				</div>
@@ -108,48 +234,52 @@
 		</div>
 		<div class="grid">
 		    <div class="col-1-6">
-				<div class="content">
-					<h1>Education</h1>
-				</div>
-			</div>
-			<div class="col-5-6 margin-align-14px">
-				<div class="content">
-					<h2>University of Saarland</h2>
-					<h3>Visual Computing</h3>
-					<p><strong>Master of Science - ongoing</strong></p>
-				</div>
-				&nbsp;
-				<div class="content">
-					<h2>First Moscow State Medical University</h2>
-					<h3>Pharmacy</h3>
-					<p><strong>Master of Science - 2018</strong></p>
-					<p>Dimploma with Honors</p>
-				</div>
-		</div>
-		<div class="grid">
-			<div class="col-1-6">
-				<div class="content">
-					<h1>Experience</h1>
+				<div class="content ed">
+					<h1 class="lang" key="education">Education</h1>
 				</div>
 			</div>
 			<div class="col-5-6 margin-align-14px">
 				<div class="content">
 					<div class="job">
-						<h2>Chair of Automation and Energy Systems, Saarland University</h2>
-						<h4>02/2020-ongoing</h4>
-						<p>Implementing backend API for a weather service</p>
+						<h2 class="lang" key="universityName">University of Saarland</h2>
+						<h3>Visual Computing</h3>
+						<p class="lang" key="masterOne"><strong> 2019, Master of Science - ongoing</strong></p>
+					</div>
+				</div>
+				&nbsp;
+				<div class="content">
+					<div class="job">
+						<h2>First Moscow State Medical University</h2>
+						<h3 class="lang" key="pharmacy">Pharmacy</h3>
+						<p class="lang" key="masterTwo"><strong>Master of Science 2013 - 2018</strong></p>
+						<p class="lang" key="honors">Dimploma with Honors</p>
+					</div>
+				</div>
+		</div>
+		<div class="grid">
+			<div class="col-1-6">
+				<div class="content">
+					<h1 class="lang" key="experience">Experience</h1>
+				</div>
+			</div>
+			<div class="col-5-6 margin-align-14px">
+				<div class="content">
+					<div class="job">
+						<h2 class="lang" key="udsaes">Chair of Automation and Energy Systems, Saarland University</h2>
+						<h4 class="lang" key="workOne">02/2020-ongoing</h4>
+						<p class="lang" key="workOneActivity">Implementing backend API for a weather service</p>
 					</div>
 					&nbsp;
 					<div class="job">
 						<h2>ki-elements, Saarland</h2>
 						<h4>11/2019-10/2020</h4>
-						<p>UI and unittest automatisation, software development</p>
+						<p class="lang" key="workTwoActivity">UI and unittest automatisation, software development</p>
 					</div>
 					&nbsp;
 					<div class="job">
-						<h2>Berendsen Russia, Moscow</h2>
+						<h2>Berendsen(Elis) Russia, Moscow</h2>
 						<h4>11/2016-08/2018</h4>
-						<p>Quality manager</p>
+						<p class="lang" key="berendsen">Quality manager</p>
 					</div>
 				</div>
 			</div>
@@ -157,20 +287,26 @@
 		<div class="grid">
 			<div class="col-1-6">
 				<div class="content">
-					<h2>Technical Literature that ecouraged me</h2>
+					<h2 class="lang" key="books">Technical Literature that ecouraged me</h2>
 				</div>
 			</div>
 			<div class="col-5-6 margin-align-14px">
 				<div class="content">
 					<div class="small-text">
-						<h2>Structure and interpretation of Computer programs</h2>
-						<p>MIT Course, Harolf Abelson</p>
-						<h2>The definitive Guide to Django, Second edition</h2>
-						<p>Adrian Holovaty, Jacob Kaplan-Moss</p>
-						<h2>Grokking algorithms</h2>
-						<p>Aditya Bhargava</p>
-						<h2>JavaScript for impatient programmers</h2>
-						<p>Dr. Axel Rauschmayer</p>
+						<div class="job">
+							<h2 class="lang" key="sicp">Structure and interpretation of Computer programs</h2>
+							<p class="lang" key="sicpAuthors">MIT Course, Harolf Abelson</p>
+						</div>
+						<div class="job">
+							<h2 class="lang" key="django">The definitive Guide to Django, Second edition</h2>
+							<p class="lang" key="djangoAuthors">Adrian Holovaty, Jacob Kaplan-Moss</p>
+						</div>
+						<div class="job">
+							<h2 class="lang" key="grockingAlgorithms">Grokking algorithms</h2>
+							<p class="lang" key="grockingAlgorithmsAuthors">Aditya Bhargava</p>
+						</div>
+						<h2 class="lang" key="js">JavaScript for impatient programmers</h2>
+						<p class="lang" key="jsAuthors">Dr. Axel Rauschmayer</p>
 					</div>
 				</div>
 			</div>
@@ -179,20 +315,31 @@
 		<div class="grid">
 			<div class="col-1-6">
 				<div class="content">
-					<h2>More about me</h2>			
+					<h2 class="lang" key="aboutMe">More about me</h2>			
 				</div>
 			</div>
 			<div class="col-5-6">
 				<div class="content no-header">
 					<p>
-						<h2 class='small-text'>
-							I am willing to find a place, where i can work and learn,
-							can make use of my skills,
-							bring value by my work, become more professional, where 
-							working process is both productive and pleasant.
-
-							<p>I am 24. In leisure time i play guitar, record videos, play football and draw.</p>
-							<p>I speak Russian-native, English-C1, German-B2.</p>
+						<h2 class='small-text lang' key="aboutMeContents">
+							<p class="lang" key="aboutMeContentsOne">I am willing to find a place, where i can work and learn,
+								can make use of my skills,
+								bring value by my work, become more professional, where 
+								working process is both productive and pleasant.
+							</p>
+			
+							<p class="lang" key="aboutMeContentsTwo">
+								I am 24. In leisure time i play guitar, record videos, play football and draw.
+							</p>
+							<p class="lang" key="aboutMeContentsThree">
+								I speak Russian-native, English-C1, German-B2.
+							</p>
+							<p class="lang" key="aboutMeContentsFour">
+								Althoug i am a student, my current condition definetely allows me to work at least 20 hours a week.
+							</p>
+							<p class="lang" key="aboutMeContentsFive">
+								Remote positions are preferred.
+							</p>
 						</h2>
 					</p>
 				</div>
@@ -234,10 +381,6 @@
 			</div>
 		</div>
 
-
-
 	</div><!--/body-->
-
-
 	</body>
 	</html>
